@@ -28,6 +28,7 @@ class PairsListTableViewController: UITableViewController {
         
         
         randomizePairs()
+        tableView.reloadData()
     }
     
     // MARK: - Actions
@@ -76,6 +77,8 @@ class PairsListTableViewController: UITableViewController {
             PersonController.shared.delete(person: person)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            //randomizePairs()
             //tableView.deleteSections(indexPath.section, with: .fade)
         }
     }
