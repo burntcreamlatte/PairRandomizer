@@ -18,21 +18,37 @@ class PersonDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
 
         if let person = person {
             nameTextField.text = person.name
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nameTextField.becomeFirstResponder()
+    }
+    
     // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         //need to guard against name AND Person since we will default to update method
-        guard let name = nameTextField.text, !name.isEmpty, let person = person else { return }
-        PersonController.shared.update(person: person, name: name)
+        
+        guard let name = nameTextField.text, !name.isEmpty else { return }
+        if let person = person {
+            PersonController.shared.update(person: person, name: name)
+        } else {
+            PersonController.shared.add(name: name)
+        }
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - Helper Methods
+    func setupView() {
+        nameTextField.layer.cornerRadius = nameTextField.frame.height / 2
+    }
     
 }

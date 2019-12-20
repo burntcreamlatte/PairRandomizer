@@ -16,13 +16,18 @@ class PairsListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadViewIfNeeded()
 
         randomizePairs()
     }
     
+    //will be called when we pop the stack while viewDidLoad will not
+    //if we don't call this method we won't see the added person before hitting randomize
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        
+        
+        //randomizePairs()
     }
     
     // MARK: - Actions
@@ -38,12 +43,18 @@ class PairsListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //if pairs?[section].count
         return pairs?[section].count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //cleans up the titles for sections
-        return "Pair \(section + 1)"
+        if self.tableView(tableView, numberOfRowsInSection: section) > 0 {
+            return "Pair \(section + 1)"
+        } else {
+            //will delete section header if empty
+            return nil
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +76,7 @@ class PairsListTableViewController: UITableViewController {
             PersonController.shared.delete(person: person)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.deleteSections(indexPath.section, with: .fade)
         }
     }
     

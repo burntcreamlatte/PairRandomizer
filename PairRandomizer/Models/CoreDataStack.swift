@@ -27,12 +27,14 @@ class CoreDataStack {
     }
     
     // MARK: - CoreData Persistence
-//    static func saveMOC() {
-//        let context = CoreDataStack.context
-//        if context.hasChanges {
-//            do {
-//                try context.save()
-//            } catch
-//        }
-//    }
+    static func saveMOC() {
+        let context = CoreDataStack.context
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
