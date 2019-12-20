@@ -27,7 +27,7 @@ class PairsListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         
-        //randomizePairs()
+        randomizePairs()
     }
     
     // MARK: - Actions
