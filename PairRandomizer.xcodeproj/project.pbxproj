@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		AB6F177A23AD2AB400CBD72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F177923AD2AB400CBD72E /* AppDelegate.swift */; };
 		AB6F177C23AD2AB400CBD72E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F177B23AD2AB400CBD72E /* SceneDelegate.swift */; };
-		AB6F177E23AD2AB400CBD72E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F177D23AD2AB400CBD72E /* ViewController.swift */; };
 		AB6F178123AD2AB400CBD72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6F177F23AD2AB400CBD72E /* Main.storyboard */; };
 		AB6F178423AD2AB400CBD72E /* PairRandomizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB6F178223AD2AB400CBD72E /* PairRandomizer.xcdatamodeld */; };
 		AB6F178623AD2AB700CBD72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6F178523AD2AB700CBD72E /* Assets.xcassets */; };
 		AB6F178923AD2AB700CBD72E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6F178723AD2AB700CBD72E /* LaunchScreen.storyboard */; };
+		AB6F179823AD2D7F00CBD72E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F179723AD2D7F00CBD72E /* CoreDataStack.swift */; };
+		AB6F179C23AD2E9100CBD72E /* Person+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F179B23AD2E9100CBD72E /* Person+Convenience.swift */; };
+		AB6F17A023AD2F2300CBD72E /* PairsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F179F23AD2F2300CBD72E /* PairsListTableViewController.swift */; };
+		AB6F17A223AD2F3900CBD72E /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F17A123AD2F3900CBD72E /* PersonDetailViewController.swift */; };
+		AB6F17A423AD314B00CBD72E /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F17A323AD314B00CBD72E /* PersonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB6F177623AD2AB400CBD72E /* PairRandomizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PairRandomizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6F177923AD2AB400CBD72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6F177B23AD2AB400CBD72E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB6F177D23AD2AB400CBD72E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB6F178023AD2AB400CBD72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB6F178323AD2AB400CBD72E /* PairRandomizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PairRandomizer.xcdatamodel; sourceTree = "<group>"; };
 		AB6F178523AD2AB700CBD72E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB6F178823AD2AB700CBD72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6F178A23AD2AB700CBD72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6F179723AD2D7F00CBD72E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		AB6F179B23AD2E9100CBD72E /* Person+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Convenience.swift"; sourceTree = "<group>"; };
+		AB6F179F23AD2F2300CBD72E /* PairsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsListTableViewController.swift; sourceTree = "<group>"; };
+		AB6F17A123AD2F3900CBD72E /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		AB6F17A323AD314B00CBD72E /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,76 @@
 		AB6F177823AD2AB400CBD72E /* PairRandomizer */ = {
 			isa = PBXGroup;
 			children = (
-				AB6F177923AD2AB400CBD72E /* AppDelegate.swift */,
-				AB6F177B23AD2AB400CBD72E /* SceneDelegate.swift */,
-				AB6F177D23AD2AB400CBD72E /* ViewController.swift */,
-				AB6F177F23AD2AB400CBD72E /* Main.storyboard */,
-				AB6F178523AD2AB700CBD72E /* Assets.xcassets */,
-				AB6F178723AD2AB700CBD72E /* LaunchScreen.storyboard */,
-				AB6F178A23AD2AB700CBD72E /* Info.plist */,
-				AB6F178223AD2AB400CBD72E /* PairRandomizer.xcdatamodeld */,
+				AB6F179123AD2BD900CBD72E /* Models */,
+				AB6F179323AD2BE200CBD72E /* Controllers */,
+				AB6F179223AD2BDE00CBD72E /* Views */,
+				AB6F179023AD2AD800CBD72E /* Resources */,
 			);
 			path = PairRandomizer;
+			sourceTree = "<group>";
+		};
+		AB6F179023AD2AD800CBD72E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F177923AD2AB400CBD72E /* AppDelegate.swift */,
+				AB6F177B23AD2AB400CBD72E /* SceneDelegate.swift */,
+				AB6F178523AD2AB700CBD72E /* Assets.xcassets */,
+				AB6F178A23AD2AB700CBD72E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB6F179123AD2BD900CBD72E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F178223AD2AB400CBD72E /* PairRandomizer.xcdatamodeld */,
+				AB6F179723AD2D7F00CBD72E /* CoreDataStack.swift */,
+				AB6F179B23AD2E9100CBD72E /* Person+Convenience.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB6F179223AD2BDE00CBD72E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F179623AD2BFD00CBD72E /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB6F179323AD2BE200CBD72E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F179E23AD2EE900CBD72E /* Model Controllers */,
+				AB6F179D23AD2EE300CBD72E /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB6F179623AD2BFD00CBD72E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F177F23AD2AB400CBD72E /* Main.storyboard */,
+				AB6F178723AD2AB700CBD72E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB6F179D23AD2EE300CBD72E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F179F23AD2F2300CBD72E /* PairsListTableViewController.swift */,
+				AB6F17A123AD2F3900CBD72E /* PersonDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AB6F179E23AD2EE900CBD72E /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F17A323AD314B00CBD72E /* PersonController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6F177E23AD2AB400CBD72E /* ViewController.swift in Sources */,
+				AB6F179823AD2D7F00CBD72E /* CoreDataStack.swift in Sources */,
+				AB6F17A023AD2F2300CBD72E /* PairsListTableViewController.swift in Sources */,
 				AB6F177A23AD2AB400CBD72E /* AppDelegate.swift in Sources */,
 				AB6F178423AD2AB400CBD72E /* PairRandomizer.xcdatamodeld in Sources */,
+				AB6F17A423AD314B00CBD72E /* PersonController.swift in Sources */,
+				AB6F179C23AD2E9100CBD72E /* Person+Convenience.swift in Sources */,
+				AB6F17A223AD2F3900CBD72E /* PersonDetailViewController.swift in Sources */,
 				AB6F177C23AD2AB400CBD72E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y2XBHVDM;
-				INFOPLIST_FILE = PairRandomizer/Info.plist;
+				INFOPLIST_FILE = PairRandomizer/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y2XBHVDM;
-				INFOPLIST_FILE = PairRandomizer/Info.plist;
+				INFOPLIST_FILE = PairRandomizer/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PersonDetailViewController.swift
 //  PairRandomizer
 //
 //  Created by Aaron Shackelford on 12/20/19.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PersonDetailViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
     }
-
-
+    
+    
 }
-
